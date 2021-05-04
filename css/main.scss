@@ -20,6 +20,7 @@ body {
     font-weight: bold;
     color: black;
     font-size: 1.2em;
+    // padding: .1em;
 
     span {
       color: var(--primary-color);
@@ -93,7 +94,7 @@ section {
 
   .watch-video-cta {
     display: block;
-    margin-top: 2em;
+    margin-top: 1.3em;
 
     img {
       margin-right: .5em;
@@ -118,7 +119,11 @@ section.features-section {
 ul.features-list {
   margin: 0;
   padding-left: .1em;
-  // todo
+  // todo change grid
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+
+
 
   li {
     font-size: 1.1em;
@@ -221,11 +226,7 @@ nav.menu-btn {
   display: block;
 }
 
-
-
-
 nav {
-
   position: fixed;
   z-index: 999;
   width: 66%;
@@ -253,11 +254,7 @@ nav {
       color: white;
       font-weight: bold;
     }
-
   }
-
-
-
 }
 
 
@@ -268,5 +265,194 @@ nav {
   
 }
 
+// screen
+
+@media only screen and (min-width: 768px) {
+  .mobile-menu, .mobile-menu-exit {
+    display: none;
+  }
+
+  .navbar .container {
+    // display: flex;
+    // place-content: space-between;    
+    display: grid;
+    // place-content: unset;    
+    justify-content: unset;
+    
+    grid-template-columns: 180px auto;
+  }
+
+  .navbar nav {
+    display: flex;
+    justify-content: space-between;
+    background: none;
+    position: unset;
+    height: auto;
+    width: 100%;
+    padding: 0;
+
+    ul {
+      display: flex;
+    }
+
+    a {
+      color: black;
+      font-size: 1em;
+      padding: .1em 1em;
+    }
+
+    ul.primary-nav {
+      margin: 0;
+    }
+
+    li.current a {
+      font-weight: bold;
+      // color: var(--primary-color);
+    }
+
+    li.go-premium-cta a {
+      color: var(--primary-color);
+      border: 3px solid var(--primary-color);
+      font-weight: bold;
+      border-radius: 5em;
+      margin-top: -.2em;
+
+      &:hover {
+        background: var(--primary-color);
+        color: white;
+      }
 
 
+    }
+
+
+  }
+
+}
+
+
+
+
+@media only screen and (min-width: 1080px) {
+  .container {
+    width: 1080px;
+    margin: 0 auto;
+  }
+
+  section {
+    padding: 10em 4em;
+  }
+
+  .hero .container {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+
+    .left-col {
+      margin: 3em 3em 0 5em;
+
+      h1 {
+        font-size: 3em;
+        width: 90%;
+      }
+
+    }
+  }
+
+  .hero-img {
+    width: 30%;
+    margin-right: 8em;
+  }
+
+  .hero-cta {
+    display: flex;
+  }
+
+  .primary-cta {
+    margin-right: 1em;
+  }
+
+
+  ul.features-list {
+    display: block;
+    margin-left: 5em;
+
+    li {
+      font-size: 1.4em;
+
+      &:before {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  .features-section {
+    position: relative;
+
+    img {
+      display: block;
+      position: absolute;
+      right: 0;
+      width: 350px;
+      bottom: -2em
+    }
+
+  }
+
+  // .features-section img{
+  //   display: block;
+  //   position: absolute;
+  //   right: 0;
+  //   width: 350px;
+  //   bottom: -2em
+  // }
+
+  .testimonials-section ul {
+    display: flex;
+
+    li {
+      margin: 0 1em;
+    }
+  }
+
+  .contact-section {
+    position: relative;
+
+    .container {
+      display: flex;
+    }
+
+  }
+
+  .contact-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 45%;
+    height: 100%;
+
+    iframe {
+      height: 100%;
+    }
+  }
+
+
+}
+
+// todo
+// @media only screen and (min-width: 1450px) {
+//   .features-section {
+
+
+//     &:before {
+//       content: '';
+//       position: absolute;
+//       width: 10%;
+
+
+//       background: red;
+//     }
+
+//   }
+// }
