@@ -394,9 +394,11 @@ nav {
       display: block;
       position: absolute;
       right: 0;
-      width: 350px;
-      bottom: -2em
+      width: 250px;
+      bottom: -2em;
+      filter: grayscale(1); 
     }
+
 
   }
 
