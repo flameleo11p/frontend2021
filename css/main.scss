@@ -27,10 +27,11 @@ body {
     }
   }
 
-
   nav {
     display: none;
   }
+
+
 
   .container {
     display: flex;
@@ -215,3 +216,57 @@ ul.features-list {
     height: 300px;
   }
 }
+
+nav.menu-btn {
+  display: block;
+}
+
+
+
+
+nav {
+
+  position: fixed;
+  z-index: 999;
+  width: 66%;
+  height: 100vh;
+
+  right: 0;
+  top: 0;
+  background: #20272e;
+
+  padding: 1em;
+
+  ul.primary-nav {
+    margin-top: 5em;
+  }
+
+  a {
+    color: #eee;
+    text-decoration: none;
+    display: block;
+    padding: .5em;
+    font-size: 1.3em;
+    text-align: right;
+
+    &:hover {
+      color: white;
+      font-weight: bold;
+    }
+
+  }
+
+
+
+}
+
+
+.mobile-menu-exit {
+  float: right;
+  cursor: pointer;
+  margin: 0.5em;
+  
+}
+
+
+

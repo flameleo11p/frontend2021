@@ -126,6 +126,25 @@
     </div>
   </section>
 
+  <script>
+
+    const mobileBtn = document.getElementById('mobile-cta')
+    const nav = document.querySelector('nav')
+    const mobileBtnExit = document.getElementById('mobile-exit')
+
+    mobileBtn.addEventListener('click', function () {
+      nav.classList.add('menu-btn');
+    })
+
+    mobileBtnExit.addEventListener('click', function () {
+      nav.classList.remove('menu-btn');
+    })
+
+
+
+
+  </script>
+
 </body>
 
 </html>
